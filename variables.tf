@@ -21,6 +21,10 @@ variable "psqldb_name" {
   default = "psql-db-01"
 }
 
+variable "k8s_cl_name" {
+  default = "k8s-cl-01"
+}
+
 variable "tags" {
   type = map(any)
   default = {

@@ -2,7 +2,7 @@ resource "yandex_mdb_postgresql_cluster" "psql-cl-01" {
   name        = var.psqlcl_name
   environment = "PRESTABLE"
   network_id  = yandex_vpc_network.vpc-task-01.id
-  labels = var.tags
+  labels      = var.tags
 
   config {
     version = 15
@@ -13,11 +13,11 @@ resource "yandex_mdb_postgresql_cluster" "psql-cl-01" {
     }
 
     postgresql_config = {
-      max_connections                   = 20
-      enable_parallel_hash              = true
-      autovacuum_vacuum_scale_factor    = 0.34
-      default_transaction_isolation     = "TRANSACTION_ISOLATION_READ_COMMITTED"
-      shared_preload_libraries          = "SHARED_PRELOAD_LIBRARIES_AUTO_EXPLAIN,SHARED_PRELOAD_LIBRARIES_PG_HINT_PLAN"
+      max_connections                = 395
+      enable_parallel_hash           = true
+      autovacuum_vacuum_scale_factor = 0.34
+      default_transaction_isolation  = "TRANSACTION_ISOLATION_READ_COMMITTED"
+      shared_preload_libraries       = "SHARED_PRELOAD_LIBRARIES_AUTO_EXPLAIN"
     }
   }
 
