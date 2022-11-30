@@ -1,5 +1,11 @@
 variable "token" {}
 variable "psqldb_user_password" {}
+variable folder_id {}
+variable "cloud_id" {}
+
+variable "node_count" {
+  default = 2
+}
 
 variable "vpc_name" {
   default = "vpc-task-01"
@@ -23,6 +29,10 @@ variable "psqldb_name" {
 
 variable "k8s_cl_name" {
   default = "k8s-cl-01"
+}
+
+variable "k8s_ng_name" {
+  default = "k8s-ngroup-01"
 }
 
 variable "tags" {

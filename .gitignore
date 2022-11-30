@@ -1,4 +1,6 @@
 init.ps1
+cloud-init.yaml
+**/.unused/*
 # Local .terraform directories
 **/.terraform/*
 
